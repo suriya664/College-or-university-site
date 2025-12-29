@@ -1,0 +1,235 @@
+/* ===== FACILITIES PAGE STYLES ===== */
+
+.facilities-hero {
+    padding: calc(var(--spacing-unit) * 12) 0 calc(var(--spacing-unit) * 8);
+    padding-top: 120px;
+    background: var(--graphite-black);
+    text-align: center;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.125rem, 2vw, 1.375rem);
+    color: rgba(209, 213, 219, 0.8);
+    margin-top: calc(var(--spacing-unit) * 3);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Featured Facilities */
+.featured-facilities {
+    padding: calc(var(--spacing-unit) * 12) 0;
+    background: var(--tungsten-gray);
+}
+
+.facility-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: calc(var(--spacing-unit) * 4);
+    align-items: center;
+}
+
+.facility-image-large {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    filter: brightness(0.7) contrast(1.2);
+    transition: var(--transition-smooth);
+}
+
+.facility-showcase:hover .facility-image-large {
+    filter: brightness(0.8) contrast(1.3);
+}
+
+.facility-image-large::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 20px,
+            rgba(184, 115, 51, 0.1) 20px,
+            rgba(184, 115, 51, 0.1) 22px
+        );
+}
+
+.facility-content-large h2 {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    margin-bottom: calc(var(--spacing-unit) * 3);
+    color: var(--titanium-silver);
+}
+
+.facility-content-large p {
+    color: rgba(209, 213, 219, 0.8);
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    line-height: 1.8;
+    margin-bottom: calc(var(--spacing-unit) * 4);
+    max-width: 100%;
+}
+
+.facility-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.facility-features li {
+    padding: calc(var(--spacing-unit) * 1.5) 0;
+    color: rgba(209, 213, 219, 0.7);
+    font-size: 0.9375rem;
+    position: relative;
+    padding-left: calc(var(--spacing-unit) * 4);
+}
+
+.facility-features li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--molten-copper);
+    font-weight: bold;
+}
+
+/* Facilities Grid */
+.facilities-grid-section {
+    padding: calc(var(--spacing-unit) * 12) 0;
+    background: var(--graphite-black);
+}
+
+.facility-card {
+    background: var(--tungsten-gray);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    box-shadow: 
+        8px 8px 16px rgba(0, 0, 0, 0.3),
+        -4px -4px 8px rgba(255, 255, 255, 0.02);
+}
+
+.facility-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 
+        12px 12px 24px rgba(0, 0, 0, 0.4),
+        -6px -6px 12px rgba(255, 255, 255, 0.03);
+}
+
+.facility-visual {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    position: relative;
+    filter: brightness(0.7) contrast(1.1);
+    transition: var(--transition-smooth);
+}
+
+.facility-card:hover .facility-visual {
+    filter: brightness(0.8) contrast(1.2);
+    transform: scale(1.05);
+}
+
+.facility-visual::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border: 2px solid var(--molten-copper);
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+.facility-info {
+    padding: calc(var(--spacing-unit) * 4);
+}
+
+.facility-info h3 {
+    font-size: 1.375rem;
+    margin-bottom: calc(var(--spacing-unit) * 2);
+    color: var(--titanium-silver);
+}
+
+.facility-info p {
+    color: rgba(209, 213, 219, 0.7);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    margin-bottom: calc(var(--spacing-unit) * 2);
+    max-width: 100%;
+}
+
+.facility-spec {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: rgba(184, 115, 51, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Tech Facilities */
+.tech-facilities-section {
+    padding: calc(var(--spacing-unit) * 12) 0;
+    background: var(--tungsten-gray);
+}
+
+.tech-card {
+    background: var(--graphite-black);
+    border-radius: 20px;
+    padding: calc(var(--spacing-unit) * 5);
+    text-align: center;
+    height: 100%;
+    transition: var(--transition-smooth);
+    box-shadow: 
+        8px 8px 16px rgba(0, 0, 0, 0.3),
+        -4px -4px 8px rgba(255, 255, 255, 0.02);
+}
+
+.tech-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 
+        12px 12px 24px rgba(0, 0, 0, 0.4),
+        -6px -6px 12px rgba(255, 255, 255, 0.03);
+}
+
+.tech-icon {
+    font-size: 3rem;
+    margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.tech-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: calc(var(--spacing-unit) * 2);
+    color: var(--titanium-silver);
+}
+
+.tech-card p {
+    color: rgba(209, 213, 219, 0.7);
+    font-size: 0.9375rem;
+    max-width: 100%;
+    line-height: 1.7;
+}
+
+@media (max-width: 991px) {
+    .facility-showcase {
+        grid-template-columns: 1fr;
+    }
+    
+    .facility-image-large {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .facility-card,
+    .tech-card {
+        padding: calc(var(--spacing-unit) * 4);
+    }
+}
+

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | IronGate University</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/dashboards.css">
+</head>
+<body class="dashboard-body">
+    <div class="sidebar-overlay"></div>
+    
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+        <div class="sidebar-logo" onclick="window.location.href='index.html'">
+            <h2>IRONGATE</h2>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="student-dashboard.html" class="sidebar-nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="#" class="sidebar-nav-item">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </a>
+            <a href="#" class="sidebar-nav-item">
+                <i class="fas fa-clipboard-check"></i>
+                <span>Attendance</span>
+            </a>
+            <a href="#" class="sidebar-nav-item">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Marks</span>
+            </a>
+            <a href="#" class="sidebar-nav-item">
+                <i class="fas fa-book"></i>
+                <span>Courses</span>
+            </a>
+            <a href="#" class="sidebar-nav-item">
+                <i class="fas fa-bell"></i>
+                <span>Notifications</span>
+            </a>
+            <a href="#" class="sidebar-nav-item">
+                <i class="fas fa-download"></i>
+                <span>Downloads</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <div class="sidebar-user">
+                <div class="sidebar-user-avatar">ST</div>
+                <div class="sidebar-user-info">
+                    <p class="sidebar-user-name">Student Name</p>
+                    <p class="sidebar-user-role">B.Sc Computer Science</p>
+                </div>
+            </div>
+            <button class="btn-logout" onclick="window.location.href='index.html'">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <!-- Top Bar -->
+        <div class="dashboard-topbar">
+            <div>
+                <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+                <h1 class="dashboard-title">Student Dashboard</h1>
+            </div>
+            <div class="dashboard-topbar-actions">
+                <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">12</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Content -->
+        <div class="dashboard-content">
+            <!-- Stats Row -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="dashboard-card stat-card">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">Enrolled Courses</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="dashboard-card stat-card">
+                        <div class="stat-number">94%</div>
+                        <div class="stat-label">Attendance</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="dashboard-card stat-card">
+                        <div class="stat-number">3.8</div>
+                        <div class="stat-label">CGPA</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="dashboard-card stat-card">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Pending Assignments</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Profile & Courses -->
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Profile</h3>
+                            <div class="card-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div style="text-align: center; padding: 20px;">
+                            <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--molten-copper); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 2.5rem; color: var(--graphite-black); font-weight: 700;">
+                                ST
+                            </div>
+                            <h4 style="color: var(--titanium-silver); margin-bottom: 8px;">Alex Thompson</h4>
+                            <p class="text-muted mb-2">Student ID: ST2024001</p>
+                            <p class="text-muted mb-3">B.Sc Computer Science</p>
+                            <button class="btn-dashboard btn-primary-dash" style="width: 100%;">Edit Profile</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 class="card-title">My Courses</h3>
+                            <div class="card-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="dashboard-table">
+                                <thead>
+                                    <tr>
+                                        <th>Course Code</th>
+                                        <th>Course Name</th>
+                                        <th>Instructor</th>
+                                        <th>Attendance</th>
+                                        <th>Grade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>CS101</td>
+                                        <td>Introduction to Programming</td>
+                                        <td>Dr. Robert Lee</td>
+                                        <td><span class="badge badge-success">96%</span></td>
+                                        <td><strong>A</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CS201</td>
+                                        <td>Data Structures</td>
+                                        <td>Prof. Maria Garcia</td>
+                                        <td><span class="badge badge-success">92%</span></td>
+                                        <td><strong>A-</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MATH201</td>
+                                        <td>Calculus II</td>
+                                        <td>Dr. James Wilson</td>
+                                        <td><span class="badge badge-warning">88%</span></td>
+                                        <td><strong>B+</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CS301</td>
+                                        <td>Database Systems</td>
+                                        <td>Prof. Lisa Anderson</td>
+                                        <td><span class="badge badge-success">95%</span></td>
+                                        <td><strong>A</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CS401</td>
+                                        <td>Web Development</td>
+                                        <td>Dr. Robert Lee</td>
+                                        <td><span class="badge badge-success">94%</span></td>
+                                        <td><strong>A-</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>PHYS101</td>
+                                        <td>Physics I</td>
+                                        <td>Prof. David Chen</td>
+                                        <td><span class="badge badge-success">90%</span></td>
+                                        <td><strong>B+</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Attendance & Marks -->
+            <div class="row g-4 mb-4">
+                <div class="col-lg-6">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Attendance Summary</h3>
+                            <div class="card-icon">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="dashboard-table">
+                                <thead>
+                                    <tr>
+                                        <th>Course</th>
+                                        <th>Present</th>
+                                        <th>Absent</th>
+                                        <th>Percentage</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>CS101</td>
+                                        <td>48</td>
+                                        <td>2</td>
+                                        <td><span class="badge badge-success">96%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CS201</td>
+                                        <td>46</td>
+                                        <td>4</td>
+                                        <td><span class="badge badge-success">92%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MATH201</td>
+                                        <td>44</td>
+                                        <td>6</td>
+                                        <td><span class="badge badge-warning">88%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CS301</td>
+                                        <td>38</td>
+                                        <td>2</td>
+                                        <td><span class="badge badge-success">95%</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Recent Marks</h3>
+                            <div class="card-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        </div>
+                        <ul class="dashboard-list">
+                            <li class="dashboard-list-item">
+                                <div>
+                                    <strong>CS101 - Midterm Exam</strong>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">Scored: 92/100</p>
+                                </div>
+                                <span class="badge badge-success">A</span>
+                            </li>
+                            <li class="dashboard-list-item">
+                                <div>
+                                    <strong>CS201 - Assignment 3</strong>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">Scored: 88/100</p>
+                                </div>
+                                <span class="badge badge-success">A-</span>
+                            </li>
+                            <li class="dashboard-list-item">
+                                <div>
+                                    <strong>MATH201 - Quiz 2</strong>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">Scored: 85/100</p>
+                                </div>
+                                <span class="badge badge-warning">B+</span>
+                            </li>
+                            <li class="dashboard-list-item">
+                                <div>
+                                    <strong>CS301 - Lab Test</strong>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">Scored: 95/100</p>
+                                </div>
+                                <span class="badge badge-success">A</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Notifications & Downloads -->
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Notifications</h3>
+                            <div class="card-icon">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                        </div>
+                        <ul class="dashboard-list">
+                            <li class="dashboard-list-item">
+                                <div>
+                                    <strong>New Assignment Posted</strong>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">CS401 - Web Development Project</p>
+                                </div>
+                                <span class="badge badge-info">New</span>
+                            </li>
+                            <li class="dashboard-list-item">
+                                <div>
+                                    <strong>Exam Schedule Updated</strong>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">Check your exam dates</p>
+                                </div>
+                                <span class="badge badge-warning">Important</span>
+                            </li>
+                            <li class="dashboard-list-item">
+                                <div>
+                                    <strong>Grade Released</strong>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">CS201 - Data Structures</p>
+                                </div>
+                                <span class="badge badge-success">View</span>
+                            </li>
+                            <li class="dashboard-list-item">
+                                <div>
+                                    <strong>Library Book Due</strong>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">Return by Jan 20, 2024</p>
+                                </div>
+                                <span class="badge badge-danger">Urgent</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Downloads</h3>
+                            <div class="card-icon">
+                                <i class="fas fa-download"></i>
+                            </div>
+                        </div>
+                        <ul class="dashboard-list">
+                            <li class="dashboard-list-item">
+                                <div>
+                                    <strong><i class="fas fa-file-pdf"></i> Lecture_01_Introduction.pdf</strong>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">CS101 - 2.5 MB</p>
+                                </div>
+                                <button class="btn-dashboard btn-primary-dash btn-sm">Download</button>
+                            </li>
+                            <li class="dashboard-list-item">
+                                <div>
+                                    <strong><i class="fas fa-file-pdf"></i> Assignment_01_Guidelines.pdf</strong>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">CS201 - 1.8 MB</p>
+                                </div>
+                                <button class="btn-dashboard btn-primary-dash btn-sm">Download</button>
+                            </li>
+                            <li class="dashboard-list-item">
+                                <div>
+                                    <strong><i class="fas fa-file-pdf"></i> Lab_Manual_Week1.pdf</strong>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">CS301 - 3.2 MB</p>
+                                </div>
+                                <button class="btn-dashboard btn-primary-dash btn-sm">Download</button>
+                            </li>
+                            <li class="dashboard-list-item">
+                                <div>
+                                    <strong><i class="fas fa-file-pdf"></i> Course_Syllabus.pdf</strong>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">MATH201 - 1.1 MB</p>
+                                </div>
+                                <button class="btn-dashboard btn-primary-dash btn-sm">Download</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/dashboards.js"></script>
+</body>
+</html>
+
+

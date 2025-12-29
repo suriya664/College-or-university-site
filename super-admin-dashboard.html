@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Admin Dashboard | IronGate University</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/dashboards.css">
+</head>
+<body class="dashboard-body">
+    <div class="sidebar-overlay"></div>
+    
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+        <div class="sidebar-logo" onclick="window.location.href='index.html'">
+            <h2>IRONGATE</h2>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="super-admin-dashboard.html" class="sidebar-nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="#" class="sidebar-nav-item">
+                <i class="fas fa-users-cog"></i>
+                <span>Manage Admins</span>
+            </a>
+            <a href="#" class="sidebar-nav-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Analytics</span>
+            </a>
+            <a href="#" class="sidebar-nav-item">
+                <i class="fas fa-file-alt"></i>
+                <span>System Logs</span>
+            </a>
+            <a href="#" class="sidebar-nav-item">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <div class="sidebar-user">
+                <div class="sidebar-user-avatar">SA</div>
+                <div class="sidebar-user-info">
+                    <p class="sidebar-user-name">Super Admin</p>
+                    <p class="sidebar-user-role">System Administrator</p>
+                </div>
+            </div>
+            <button class="btn-logout" onclick="window.location.href='index.html'">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <!-- Top Bar -->
+        <div class="dashboard-topbar">
+            <div>
+                <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+                <h1 class="dashboard-title">Super Admin Dashboard</h1>
+            </div>
+            <div class="dashboard-topbar-actions">
+                <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">5</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Content -->
+        <div class="dashboard-content">
+            <!-- Stats Row -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="dashboard-card stat-card">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Total Admins</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="dashboard-card stat-card">
+                        <div class="stat-number">1,247</div>
+                        <div class="stat-label">Total Users</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="dashboard-card stat-card">
+                        <div class="stat-number">98.5%</div>
+                        <div class="stat-label">System Uptime</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="dashboard-card stat-card">
+                        <div class="stat-number">45</div>
+                        <div class="stat-label">Active Sessions</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- System Overview & Analytics -->
+            <div class="row g-4 mb-4">
+                <div class="col-lg-8">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 class="card-title">System Overview</h3>
+                            <div class="card-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            System Performance Chart (Integration Ready)
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Quick Actions</h3>
+                            <div class="card-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                        </div>
+                        <ul class="dashboard-list">
+                            <li class="dashboard-list-item">
+                                <span><i class="fas fa-user-plus"></i> Add New Admin</span>
+                                <button class="btn-dashboard btn-primary-dash btn-sm">Add</button>
+                            </li>
+                            <li class="dashboard-list-item">
+                                <span><i class="fas fa-database"></i> Backup Database</span>
+                                <button class="btn-dashboard btn-secondary-dash btn-sm">Backup</button>
+                            </li>
+                            <li class="dashboard-list-item">
+                                <span><i class="fas fa-shield-alt"></i> Security Audit</span>
+                                <button class="btn-dashboard btn-secondary-dash btn-sm">Run</button>
+                            </li>
+                            <li class="dashboard-list-item">
+                                <span><i class="fas fa-sync"></i> System Update</span>
+                                <button class="btn-dashboard btn-secondary-dash btn-sm">Update</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Admin Management & Analytics -->
+            <div class="row g-4 mb-4">
+                <div class="col-lg-7">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Manage Admins</h3>
+                            <div class="card-icon">
+                                <i class="fas fa-users-cog"></i>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="dashboard-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Role</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>John Smith</td>
+                                        <td>john.smith@irongate.edu</td>
+                                        <td>Admin</td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td>
+                                            <button class="btn-dashboard btn-secondary-dash btn-sm">Edit</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sarah Johnson</td>
+                                        <td>sarah.j@irongate.edu</td>
+                                        <td>Admin</td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td>
+                                            <button class="btn-dashboard btn-secondary-dash btn-sm">Edit</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Michael Brown</td>
+                                        <td>m.brown@irongate.edu</td>
+                                        <td>Admin</td>
+                                        <td><span class="badge badge-warning">Pending</span></td>
+                                        <td>
+                                            <button class="btn-dashboard btn-secondary-dash btn-sm">Edit</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Emily Davis</td>
+                                        <td>emily.d@irongate.edu</td>
+                                        <td>Admin</td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td>
+                                            <button class="btn-dashboard btn-secondary-dash btn-sm">Edit</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Analytics</h3>
+                            <div class="card-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            Analytics Chart (Integration Ready)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- System Logs -->
+            <div class="row g-4">
+                <div class="col-12">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Recent System Logs</h3>
+                            <div class="card-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="dashboard-table">
+                                <thead>
+                                    <tr>
+                                        <th>Timestamp</th>
+                                        <th>User</th>
+                                        <th>Action</th>
+                                        <th>Status</th>
+                                        <th>Details</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2024-01-15 14:32:15</td>
+                                        <td>Super Admin</td>
+                                        <td>System Backup</td>
+                                        <td><span class="badge badge-success">Success</span></td>
+                                        <td>Full database backup completed</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-01-15 13:45:22</td>
+                                        <td>John Smith</td>
+                                        <td>Admin Created</td>
+                                        <td><span class="badge badge-success">Success</span></td>
+                                        <td>New admin account created</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-01-15 12:18:07</td>
+                                        <td>System</td>
+                                        <td>Security Scan</td>
+                                        <td><span class="badge badge-warning">Warning</span></td>
+                                        <td>Minor security issue detected</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-01-15 11:05:33</td>
+                                        <td>Super Admin</td>
+                                        <td>System Update</td>
+                                        <td><span class="badge badge-success">Success</span></td>
+                                        <td>System updated to v2.1.0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/dashboards.js"></script>
+</body>
+</html>
+
+

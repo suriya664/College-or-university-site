@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard | IronGate University</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/dashboards.css">
+</head>
+<body class="dashboard-body">
+    <div class="sidebar-overlay"></div>
+    
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+        <div class="sidebar-logo" onclick="window.location.href='index.html'">
+            <h2>IRONGATE</h2>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="staff-dashboard.html" class="sidebar-nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="#" class="sidebar-nav-item">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <span>Classes & Subjects</span>
+            </a>
+            <a href="#" class="sidebar-nav-item">
+                <i class="fas fa-upload"></i>
+                <span>Upload Notes</span>
+            </a>
+            <a href="#" class="sidebar-nav-item">
+                <i class="fas fa-clipboard-check"></i>
+                <span>Attendance</span>
+            </a>
+            <a href="#" class="sidebar-nav-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Schedule</span>
+            </a>
+            <a href="#" class="sidebar-nav-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>Student Performance</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <div class="sidebar-user">
+                <div class="sidebar-user-avatar">ST</div>
+                <div class="sidebar-user-info">
+                    <p class="sidebar-user-name">Staff Member</p>
+                    <p class="sidebar-user-role">Faculty</p>
+                </div>
+            </div>
+            <button class="btn-logout" onclick="window.location.href='index.html'">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <!-- Top Bar -->
+        <div class="dashboard-topbar">
+            <div>
+                <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+                <h1 class="dashboard-title">Staff Dashboard</h1>
+            </div>
+            <div class="dashboard-topbar-actions">
+                <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Content -->
+        <div class="dashboard-content">
+            <!-- Stats Row -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="dashboard-card stat-card">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">Active Classes</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="dashboard-card stat-card">
+                        <div class="stat-number">245</div>
+                        <div class="stat-label">Total Students</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="dashboard-card stat-card">
+                        <div class="stat-number">92%</div>
+                        <div class="stat-label">Avg Attendance</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="dashboard-card stat-card">
+                        <div class="stat-number">15</div>
+                        <div class="stat-label">Pending Tasks</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Classes & Schedule -->
+            <div class="row g-4 mb-4">
+                <div class="col-lg-7">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Classes & Subjects</h3>
+                            <div class="card-icon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="dashboard-table">
+                                <thead>
+                                    <tr>
+                                        <th>Subject</th>
+                                        <th>Class</th>
+                                        <th>Students</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Introduction to Programming</td>
+                                        <td>CS101-A</td>
+                                        <td>45</td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td>
+                                            <button class="btn-dashboard btn-secondary-dash btn-sm">View</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Data Structures</td>
+                                        <td>CS201-B</td>
+                                        <td>38</td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td>
+                                            <button class="btn-dashboard btn-secondary-dash btn-sm">View</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Database Systems</td>
+                                        <td>CS301-A</td>
+                                        <td>32</td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td>
+                                            <button class="btn-dashboard btn-secondary-dash btn-sm">View</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Web Development</td>
+                                        <td>CS401-C</td>
+                                        <td>28</td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td>
+                                            <button class="btn-dashboard btn-secondary-dash btn-sm">View</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Today's Schedule</h3>
+                            <div class="card-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                        </div>
+                        <ul class="dashboard-list">
+                            <li class="dashboard-list-item">
+                                <div>
+                                    <strong>CS101-A</strong>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">09:00 AM - 10:30 AM</p>
+                                </div>
+                                <span class="badge badge-success">Upcoming</span>
+                            </li>
+                            <li class="dashboard-list-item">
+                                <div>
+                                    <strong>CS201-B</strong>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">11:00 AM - 12:30 PM</p>
+                                </div>
+                                <span class="badge badge-info">Scheduled</span>
+                            </li>
+                            <li class="dashboard-list-item">
+                                <div>
+                                    <strong>CS301-A</strong>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">02:00 PM - 03:30 PM</p>
+                                </div>
+                                <span class="badge badge-info">Scheduled</span>
+                            </li>
+                            <li class="dashboard-list-item">
+                                <div>
+                                    <strong>CS401-C</strong>
+                                    <p class="text-muted mb-0" style="font-size: 0.75rem;">04:00 PM - 05:30 PM</p>
+                                </div>
+                                <span class="badge badge-info">Scheduled</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Attendance & Upload Notes -->
+            <div class="row g-4 mb-4">
+                <div class="col-lg-6">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Recent Attendance</h3>
+                            <div class="card-icon">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="dashboard-table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Class</th>
+                                        <th>Present</th>
+                                        <th>Absent</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2024-01-15</td>
+                                        <td>CS101-A</td>
+                                        <td>42</td>
+                                        <td>3</td>
+                                        <td><span class="badge badge-success">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-01-15</td>
+                                        <td>CS201-B</td>
+                                        <td>35</td>
+                                        <td>3</td>
+                                        <td><span class="badge badge-success">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-01-14</td>
+                                        <td>CS301-A</td>
+                                        <td>30</td>
+                                        <td>2</td>
+                                        <td><span class="badge badge-success">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-01-14</td>
+                                        <td>CS401-C</td>
+                                        <td>26</td>
+                                        <td>2</td>
+                                        <td><span class="badge badge-success">Completed</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Upload Notes</h3>
+                            <div class="card-icon">
+                                <i class="fas fa-upload"></i>
+                            </div>
+                        </div>
+                        <div style="padding: 20px;">
+                            <div style="border: 2px dashed rgba(255,255,255,0.2); border-radius: 8px; padding: 40px; text-align: center; margin-bottom: 16px;">
+                                <i class="fas fa-cloud-upload-alt" style="font-size: 3rem; color: var(--molten-copper); margin-bottom: 16px;"></i>
+                                <p class="text-muted mb-2">Drag & drop files here or click to browse</p>
+                                <button class="btn-dashboard btn-primary-dash">Choose Files</button>
+                            </div>
+                            <ul class="dashboard-list">
+                                <li class="dashboard-list-item">
+                                    <div>
+                                        <strong>Lecture_01_Introduction.pdf</strong>
+                                        <p class="text-muted mb-0" style="font-size: 0.75rem;">Uploaded 2 days ago</p>
+                                    </div>
+                                    <span class="badge badge-success">Published</span>
+                                </li>
+                                <li class="dashboard-list-item">
+                                    <div>
+                                        <strong>Assignment_01_Guidelines.pdf</strong>
+                                        <p class="text-muted mb-0" style="font-size: 0.75rem;">Uploaded 5 days ago</p>
+                                    </div>
+                                    <span class="badge badge-success">Published</span>
+                                </li>
+                                <li class="dashboard-list-item">
+                                    <div>
+                                        <strong>Lab_Manual_Week1.pdf</strong>
+                                        <p class="text-muted mb-0" style="font-size: 0.75rem;">Uploaded 1 week ago</p>
+                                    </div>
+                                    <span class="badge badge-success">Published</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Student Performance -->
+            <div class="row g-4">
+                <div class="col-12">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Student Performance Overview</h3>
+                            <div class="card-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            Performance Analytics Chart (Integration Ready)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/dashboards.js"></script>
+</body>
+</html>
+
+

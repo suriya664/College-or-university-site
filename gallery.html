@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gallery - IronGate University">
+    <title>Gallery | IronGate University</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">IRONGATE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Home Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown">
+                            HOME
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">HOME</a></li>
+                            <li><a class="dropdown-item" href="home2.html">HOME 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+                    
+                    <!-- Courses Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown">
+                            COURSES
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="courses.html">COURSES</a></li>
+                            <li><a class="dropdown-item" href="departments.html">DEPARTMENTS</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item"><a class="nav-link" href="fees-scholarships.html">FEES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="campus-life.html">CAMPUS LIFE</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">GALLERY</a></li>
+                    <li class="nav-item"><a class="nav-link" href="placements.html">PLACEMENTS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link btn-login" href="login.html">LOGIN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-register" href="register.html">GET STARTED</a>
+                    </li>
+                    
+                    <!-- Dashboard Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle btn-dashboard" href="#" id="dashboardDropdown" role="button" data-bs-toggle="dropdown">
+                            DASHBOARD
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="super-admin-dashboard.html">Super Admin</a></li>
+                            <li><a class="dropdown-item" href="admin-dashboard.html">Admin</a></li>
+                            <li><a class="dropdown-item" href="staff-dashboard.html">Staff</a></li>
+                            <li><a class="dropdown-item" href="student-dashboard.html">Student</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Hero -->
+    <section class="gallery-hero">
+        <div class="container">
+            <h1 class="page-title">CAMPUS GALLERY</h1>
+            <p class="hero-text">Explore our campus through stunning visuals showcasing facilities, events, and student life.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="gallery-filter-section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">ALL</button>
+                <button class="filter-btn" data-filter="campus">CAMPUS</button>
+                <button class="filter-btn" data-filter="events">EVENTS</button>
+                <button class="filter-btn" data-filter="facilities">FACILITIES</button>
+                <button class="filter-btn" data-filter="students">STUDENTS</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid (Masonry Style) -->
+    <section class="gallery-grid-section">
+        <div class="container">
+            <div class="gallery-masonry">
+                <div class="gallery-item" data-category="campus">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.MT6Iz_6COs4pC-GYgWg_igHaFC?cb=ucfimg2&ucfimg=1&w=1000&h=680&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Campus View" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>Campus View</h4>
+                        <p>Main building architecture</p>
+                    </div>
+                </div>
+                <div class="gallery-item large" data-category="facilities">
+                    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80" alt="Library" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>Library</h4>
+                        <p>Modern learning center</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Tech Symposium" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>Tech Symposium</h4>
+                        <p>Annual technology event</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="students">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Student Life" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>Student Life</h4>
+                        <p>Campus activities</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="campus">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80" alt="Sports Complex" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>Sports Complex</h4>
+                        <p>Athletic facilities</p>
+                    </div>
+                </div>
+                <div class="gallery-item large" data-category="facilities">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80" alt="Research Lab" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>Research Lab</h4>
+                        <p>Advanced laboratories</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&q=80" alt="Cultural Festival" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>Cultural Festival</h4>
+                        <p>Annual celebration</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="students">
+                    <img src="https://www.usnews.com/dims4/USNEWS/720adeb/2147483647/thumbnail/970x647/quality/85/?url=http:%2F%2Fmedia.beam.usnews.com%2F37%2Fd4%2F7e45703f446daeded99095a8ced8%2F151019-graduate-stock.jpg" alt="Graduation" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>Graduation</h4>
+                        <p>Commencement ceremony</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="campus">
+                    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80" alt="Garden Area" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>Garden Area</h4>
+                        <p>Beautiful campus grounds</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="facilities">
+                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&q=80" alt="Auditorium" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>Auditorium</h4>
+                        <p>Event venue</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&q=80" alt="Career Fair" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>Career Fair</h4>
+                        <p>Job opportunities</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="students">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80" alt="Study Groups" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>Study Groups</h4>
+                        <p>Collaborative learning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-background"></div>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="footer-title">IRONGATE UNIVERSITY</h4>
+                    <p class="footer-text">Where Precision Meets Performance. Shaping the future through excellence in education.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-heading">ACADEMICS</h5>
+                    <ul class="footer-links">
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="departments.html">Departments</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">CAMPUS</h5>
+                    <ul class="footer-links">
+                        <li><a href="campus-life.html">Campus Life</a></li>
+                        <li><a href="facilities.html">Facilities</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">CONTACT</h5>
+                    <ul class="footer-links">
+                        <li>+1 (555) 123-4567</li>
+                        <li>info@irongate.edu</li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                </div>
+                <p>&copy; 2025 IronGate University. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Prevent Bootstrap Dropdowns on Mobile/Tablet -->
+    <script>
+        (function() {
+            // Function to disable Bootstrap dropdowns on mobile/tablet
+            function disableBootstrapDropdowns() {
+                if (window.innerWidth <= 991) {
+                    document.querySelectorAll('.dropdown-toggle').forEach(function(toggle) {
+                        toggle.removeAttribute('data-bs-toggle');
+                        toggle.removeAttribute('data-bs-auto-close');
+                        toggle.setAttribute('data-mobile-dropdown', 'true');
+                        
+                        // Change href to prevent page jump
+                        if (toggle.getAttribute('href') === '#') {
+                            toggle.setAttribute('href', 'javascript:void(0);');
+                        }
+                        
+                        try {
+                            if (typeof bootstrap !== 'undefined' && bootstrap.Dropdown) {
+                                const instance = bootstrap.Dropdown.getInstance(toggle);
+                                if (instance) {
+                                    instance.dispose();
+                                }
+                            }
+                        } catch(e) {
+                            // Ignore errors
+                        }
+                    });
+                }
+            }
+            
+            // Run immediately
+            disableBootstrapDropdowns();
+            
+            // Run after DOM is ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', function() {
+                    disableBootstrapDropdowns();
+                    setTimeout(disableBootstrapDropdowns, 200);
+                });
+            } else {
+                disableBootstrapDropdowns();
+                setTimeout(disableBootstrapDropdowns, 200);
+            }
+            
+            // Run after Bootstrap loads
+            window.addEventListener('load', function() {
+                setTimeout(disableBootstrapDropdowns, 100);
+                setTimeout(disableBootstrapDropdowns, 300);
+            });
+            
+            // Run on resize
+            let resizeTimer;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(disableBootstrapDropdowns, 100);
+            });
+            
+            // Also intercept Bootstrap dropdown initialization
+            if (typeof bootstrap !== 'undefined' && bootstrap.Dropdown) {
+                const originalGetInstance = bootstrap.Dropdown.getInstance;
+                bootstrap.Dropdown.getInstance = function(element) {
+                    if (window.innerWidth <= 991) {
+                        const toggle = element;
+                        if (toggle && toggle.hasAttribute('data-mobile-dropdown')) {
+                            return null;
+                        }
+                    }
+                    return originalGetInstance.call(this, element);
+                };
+            }
+        })();
+    </script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script>
+        // Gallery Filter
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filter = this.dataset.filter;
+                document.querySelectorAll('.gallery-item').forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

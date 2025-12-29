@@ -1,0 +1,520 @@
+/* ============================================
+   IRONGATE UNIVERSITY - GLOBAL STYLES
+   NEO-LUX INDUSTRIAL Design System
+   ============================================ */
+
+/* ===== CSS VARIABLES ===== */
+:root {
+    /* Colors */
+    --graphite-black: #0B0D0F;
+    --tungsten-gray: #15181C;
+    --titanium-silver: #D1D5DB;
+    --molten-copper: #B87333;
+    --glass-overlay: rgba(255, 255, 255, 0.08);
+    
+    /* Typography */
+    --font-heading: 'Inter', sans-serif;
+    --font-subtext: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    
+    /* Spacing */
+    --spacing-unit: 8px;
+    
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s ease;
+}
+
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--graphite-black);
+    color: var(--titanium-silver);
+    line-height: 1.6;
+    overflow-x: hidden;
+    font-size: 16px;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Global Centering */
+.container {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    justify-content: center;
+    text-align: center;
+}
+
+.row > [class*="col-"] {
+    text-align: center;
+}
+
+.page-title, h1, h2, h3, h4, h5, h6 {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn, button, .btn-neo {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+section {
+    text-align: center;
+}
+
+.neo-card, .card {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul, ol {
+    text-align: center;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.d-flex {
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        text-align: center;
+    }
+    
+    .container {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding-left: calc(var(--spacing-unit) * 2);
+        padding-right: calc(var(--spacing-unit) * 2);
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center;
+    }
+    
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .row > [class*="col-"] {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .page-title {
+        white-space: normal !important;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        font-size: clamp(1.5rem, 8vw, 2.5rem);
+        text-align: center !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Center all headings */
+    h1, h2, h3, h4, h5, h6 {
+        text-align: center !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Center paragraphs and text */
+    p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Center images */
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Center buttons */
+    .btn, button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    /* Center cards and sections */
+    .card, section {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Center lists */
+    ul, ol {
+        text-align: center;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Center flex containers */
+    .d-flex {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Tablet centering */
+@media (min-width: 769px) and (max-width: 991px) {
+    html, body {
+        text-align: center;
+    }
+    
+    .container {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .row {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .row > [class*="col-"] {
+        text-align: center;
+    }
+    
+    .page-title, h1, h2, h3, h4, h5, h6 {
+        text-align: center !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    p {
+        text-align: center;
+    }
+    
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .btn, button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    color: var(--titanium-silver);
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h4 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
+h5 { font-size: clamp(1rem, 2vw, 1.25rem); }
+h6 { font-size: clamp(0.875rem, 1.5vw, 1rem); }
+
+/* Page Title - Center aligned, one line */
+.page-title {
+    text-align: center !important;
+    white-space: nowrap !important;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+p {
+    font-family: var(--font-body);
+    font-size: clamp(0.9375rem, 1.5vw, 1.125rem);
+    max-width: 65ch;
+    line-height: 1.8;
+}
+
+.italic-subtext {
+    font-family: var(--font-subtext);
+    font-style: italic;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--titanium-silver);
+    opacity: 0.9;
+}
+
+/* ===== LINKS ===== */
+a {
+    color: var(--titanium-silver);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+a:hover {
+    color: var(--molten-copper);
+}
+
+/* ===== BUTTONS ===== */
+.btn-neo {
+    display: inline-block;
+    padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 4);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.875rem;
+    background: var(--tungsten-gray);
+    color: var(--titanium-silver);
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        8px 8px 16px rgba(0, 0, 0, 0.4),
+        -4px -4px 8px rgba(255, 255, 255, 0.02);
+}
+
+.btn-neo:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        12px 12px 24px rgba(0, 0, 0, 0.5),
+        -6px -6px 12px rgba(255, 255, 255, 0.03);
+    color: var(--titanium-silver);
+}
+
+.btn-neo:active {
+    transform: translateY(0);
+    box-shadow: 
+        4px 4px 8px rgba(0, 0, 0, 0.4),
+        -2px -2px 4px rgba(255, 255, 255, 0.02);
+}
+
+.btn-neo-primary {
+    background: linear-gradient(135deg, var(--tungsten-gray) 0%, var(--molten-copper) 100%);
+    color: var(--graphite-black);
+    font-weight: 700;
+}
+
+.btn-neo-secondary {
+    background: var(--tungsten-gray);
+    border: 1px solid rgba(184, 115, 51, 0.3);
+}
+
+/* ===== CONTAINERS & SECTIONS ===== */
+.container {
+    padding-left: calc(var(--spacing-unit) * 2);
+    padding-right: calc(var(--spacing-unit) * 2);
+}
+
+section {
+    padding: calc(var(--spacing-unit) * 10) 0;
+    position: relative;
+}
+
+.section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(184, 115, 51, 0.3) 50%, 
+        transparent 100%);
+    margin: calc(var(--spacing-unit) * 6) 0;
+    position: relative;
+}
+
+.section-divider::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    background: var(--molten-copper);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--molten-copper);
+}
+
+/* ===== NEOMORPHISM CARDS ===== */
+.neo-card {
+    background: var(--tungsten-gray);
+    border-radius: 24px;
+    padding: calc(var(--spacing-unit) * 4);
+    transition: var(--transition-smooth);
+    box-shadow: 
+        12px 12px 24px rgba(0, 0, 0, 0.4),
+        -6px -6px 12px rgba(255, 255, 255, 0.02);
+    position: relative;
+    overflow: hidden;
+}
+
+.neo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.05) 0%, 
+        transparent 50%);
+    opacity: 0;
+    transition: var(--transition-smooth);
+}
+
+.neo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+        16px 16px 32px rgba(0, 0, 0, 0.5),
+        -8px -8px 16px rgba(255, 255, 255, 0.03);
+}
+
+.neo-card:hover::before {
+    opacity: 1;
+}
+
+.neo-card:active {
+    transform: translateY(-2px);
+    box-shadow: 
+        8px 8px 16px rgba(0, 0, 0, 0.4),
+        -4px -4px 8px rgba(255, 255, 255, 0.02);
+}
+
+/* ===== GLASSMORPHISM ===== */
+.glass-panel {
+    background: rgba(21, 24, 28, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* ===== UTILITIES ===== */
+.text-copper {
+    color: var(--molten-copper);
+}
+
+.bg-tungsten {
+    background-color: var(--tungsten-gray);
+}
+
+.bg-graphite {
+    background-color: var(--graphite-black);
+}
+
+.spacing-top { margin-top: calc(var(--spacing-unit) * 4); }
+.spacing-bottom { margin-bottom: calc(var(--spacing-unit) * 4); }
+.spacing-y { margin-top: calc(var(--spacing-unit) * 4); margin-bottom: calc(var(--spacing-unit) * 4); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    section {
+        padding: calc(var(--spacing-unit) * 6) 0;
+    }
+    
+    .neo-card {
+        padding: calc(var(--spacing-unit) * 3);
+    }
+    
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-left: calc(var(--spacing-unit) * 1.5);
+        padding-right: calc(var(--spacing-unit) * 1.5);
+    }
+    
+    section {
+        padding: calc(var(--spacing-unit) * 4) 0;
+    }
+}
+
+/* ===== CURSOR GLOW (Desktop Only) ===== */
+@media (min-width: 1025px) {
+    .cursor-glow {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: radial-gradient(circle, 
+            rgba(184, 115, 51, 0.4) 0%, 
+            rgba(184, 115, 51, 0) 70%);
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        transition: width 0.3s ease, height 0.3s ease;
+        display: block;
+    }
+    
+    .cursor-glow.hover {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .cursor-glow {
+        display: none;
+    }
+}
+
